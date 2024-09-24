@@ -26,8 +26,6 @@ HOSTED_ZONE_ID=Z01660352B79IYCPM0R9
                             "ResourceRecords": [{ "Value": "'$IP_ADDRESS'"}]
                         }}]
     }
-    '
-done
 
 # imporvement
 # check instance is already created or not
