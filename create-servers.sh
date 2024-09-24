@@ -1,6 +1,8 @@
 #!/bin/bash
 
-NAMES=$@
+#NAMES=$@
+
+NAMES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
 INSTANCE_TYPE=""
 IMAGE_ID=ami-0b4f379183e5706b9
 SECURITY_GROUP_ID=sg-030283547d62a478c
@@ -9,7 +11,7 @@ HOSTED_ZONE_ID=Z01660352B79IYCPM0R9
 
 # if mysql or mongodb instance_type should be t3.medium , for all others it is t2.micro
 
-for i in $@
+for i in "${NAMES[@]}"
 do  
     if [[ $i == "mongodb" || $i == "mysql" ]]
     then
